@@ -1,0 +1,89 @@
+.wrapper {
+  --search-border-radius: 92px;
+  --search-height: 46px;
+  --search-top-spacer: 9px;
+  --search-button-width: 52px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
+  height: var(--default-layout-header-height);
+  justify-content: center;
+  max-width: 100;
+  background-color: var(--white);
+}
+
+.inner {
+  width: var(--default-layout-width);
+  padding: var(--default-layout-horizontal-spacer);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  padding-right: 24px;
+  padding-left: 16px;
+}
+
+.logo {
+  min-width: 300px;
+}
+
+.logo-link {
+  display: flex;
+}
+
+//Actions
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions-btn {
+  display: flex;
+}
+
+.more-btn {
+  font-size: 2rem;
+  margin-left: 28px;
+  padding: 4px 8px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.action-btn {
+  position: relative;
+  display: flex;
+  font-size: 2.2rem;
+  background-color: transparent;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -3px;
+  right: 0px;
+  padding: 0px 6px;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  font-family: var(--font-family);
+  background-color: var(--primary);
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
