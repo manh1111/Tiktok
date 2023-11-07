@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
-import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import classNames from 'classnames/bind';
 import 'tippy.js/dist/tippy.css'
 import HeadlessTippy from '@tippyjs/react/headless';
 
@@ -16,7 +16,7 @@ const cx = classNames.bind(styles)
 function Search() {
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
-    const [showResult, setShowResult] = useState(true);
+    const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const debounced = useDebounce(searchValue, 500)
@@ -50,7 +50,7 @@ function Search() {
     }
 
     return (
-        <>
+        <div>
             <HeadlessTippy
                 interactive
                 visible={showResult && searchResult.length > 0}
@@ -58,7 +58,7 @@ function Search() {
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                         <PopperWrapper>
                             <h4 className={cx('search-title')}>
-                                Acconts
+                                Accounts
                             </h4>
                             {searchResult.map((result) => (
                                 <AccountItem key={result.id} data={result} />
@@ -92,7 +92,7 @@ function Search() {
                     </button>
                 </div>
             </HeadlessTippy >
-        </>
+        </div>
     );
 }
 
